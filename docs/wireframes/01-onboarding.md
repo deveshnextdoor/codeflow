@@ -1,474 +1,250 @@
-\# Wireframe 01 — Onboarding
+Wireframe 01 — Onboarding
 
-
-
-\## Goal
-
-
+Goal
 
 Get a new learner into their first learning session with minimal setup.
 
-
-
 Onboarding should answer:
 
+What is CodeFlow?
 
+What do you want to learn?
 
-1\. What is CodeFlow?
+How comfortable are you?
 
-2\. What do you want to learn?
-
-3\. How comfortable are you?
-
-4\. How much time do you want to spend daily?
-
-
+How much time do you want to spend daily?
 
 The first selected topic becomes the user's current learning path. Users can add or switch learning paths later without losing progress.
 
+Screen 1 — Welcome
 
+Elements
 
-\---
+CodeFlow logo/name
 
+Short value proposition:
 
+"Learn CS a little every day."
 
-\## Screen 1 — Welcome
+Supporting message:
 
+"Understand → Practice → Remember"
 
+Primary button: Get Started
 
-\### Elements
+Optional secondary action: Skip
 
+Actions
 
-
-\- CodeFlow logo/name
-
-\- Short value proposition:
-
-&#x20; - "Learn CS a little every day."
-
-\- Supporting message:
-
-&#x20; - "Understand → Practice → Solve → Remember"
-
-\- Primary button: `Get Started`
-
-\- Optional secondary action: `Skip`
-
-
-
-\### Actions
-
-
-
-\*\*Get Started\*\*
-
-
+Get Started
 
 → Topic Selection
 
+Skip
 
+→ Learning Feed using the default onboarding choices:
 
-\*\*Skip\*\*
+Topic: Python
 
+Level: "I'm completely new"
 
+Daily goal: 10 minutes
 
-→ Topic Selection
+Skipping does not require the learner to make any additional onboarding selections. The learner can change their topic, level or daily goal later from the appropriate settings.
 
-
-
-For the pilot, skipping should not bypass topic selection.
-
-
-
-\### Loading
-
-
+Loading
 
 Not expected.
 
-
-
-\### Empty
-
-
+Empty
 
 Not applicable.
 
-
-
-\### Error
-
-
+Error
 
 Not expected.
 
+Screen 2 — Choose Your First Topic
 
-
-\---
-
-
-
-\## Screen 2 — Choose Your First Topic
-
-
-
-\### Elements
-
-
+Elements
 
 Title:
 
-
-
-> What do you want to learn?
-
-
+What do you want to learn?
 
 Topic cards:
 
+Python
 
+C
 
-\- Python
-
-\- C
-
-\- C++
-
-
+C++
 
 Supporting text:
 
-
-
-> You can change or add learning paths later.
-
-
+You can change or add learning paths later.
 
 Primary button:
 
+Continue
 
-
-`Continue`
-
-
-
-\### Interaction
-
-
+Interaction
 
 User selects exactly one topic for the initial path.
 
-
-
 Selected topic has a clear visual state.
 
+Actions
 
-
-\### Actions
-
-
-
-\*\*Continue\*\*
-
-
+Continue
 
 → Level Selection
 
-
-
 No topic selected:
 
+Continue remains disabled.
 
-
-`Continue` remains disabled.
-
-
-
-\### Loading
-
-
+Loading
 
 Show topic placeholders if topic metadata is being loaded.
 
+Empty
 
-
-\### Empty
-
-
-
-> No learning paths are available right now.
-
-
+No learning paths are available right now.
 
 Provide a retry action.
 
+Error
 
-
-\### Error
-
-
-
-> We couldn't load the learning paths.
-
-
+We couldn't load the learning paths.
 
 Actions:
 
+Retry
 
+Screen 3 — Choose Your Level
 
-\- `Retry`
-
-
-
-\---
-
-
-
-\## Screen 3 — Choose Your Level
-
-
-
-\### Elements
-
-
+Elements
 
 Title:
 
-
-
-> How comfortable are you?
-
-
+How comfortable are you?
 
 Options:
 
+I'm completely new
 
+I've seen some basics
 
-\- I'm completely new
+I can write simple programs
 
-\- I've seen some basics
-
-\- I can write simple programs
-
-\- I'm comfortable coding
-
-
+I'm comfortable coding
 
 Use descriptive options rather than labels such as Beginner / Intermediate / Advanced.
 
-
-
-\### Actions
-
-
+Actions
 
 Selecting an option enables:
 
+Continue
 
-
-`Continue`
-
-
-
-\*\*Continue\*\*
-
-
+Continue
 
 → Daily Goal
 
-
-
-\### Loading
-
-
+Loading
 
 Not expected after topic selection.
 
-
-
-\### Empty
-
-
+Empty
 
 Not applicable.
 
-
-
-\### Error
-
-
+Error
 
 Not expected.
 
+Screen 4 — Daily Goal
 
-
-\---
-
-
-
-\## Screen 4 — Daily Goal
-
-
-
-\### Elements
-
-
+Elements
 
 Title:
 
-
-
-> How much time do you have?
-
-
+How much time do you have?
 
 Options:
 
-
-
-\### 5 minutes
-
-
+5 minutes
 
 Quick daily practice
 
-
-
-\### 10 minutes
-
-
+10 minutes
 
 Standard session
 
-
-
-\### 15 minutes
-
-
+15 minutes
 
 Deeper practice
 
-
-
 Recommended/default selection:
 
-
-
-`10 minutes`
-
-
+10 minutes
 
 Supporting text:
 
+This is a daily target, not a minimum requirement.
 
-
-> This is a daily target, not a minimum requirement.
-
-
-
-\### Actions
-
-
+Actions
 
 Selecting a goal enables:
 
+Start Learning
 
-
-`Start Learning`
-
-
-
-\*\*Start Learning\*\*
-
-
+Start Learning
 
 → Learning Feed
 
-
-
 The selected topic becomes the current learning path.
 
-
-
-\### Loading
-
-
+Loading
 
 Show a short transition/loading state while the first learning session is prepared.
 
-
-
-\### Empty
-
-
+Empty
 
 If no cards are available:
 
-
-
-> This learning path isn't ready yet.
-
-
+This learning path isn't ready yet.
 
 Actions:
 
+Choose another topic
 
+Try again
 
-\- `Choose another topic`
+Error
 
-\- `Try again`
-
-
-
-\### Error
-
-
-
-> We couldn't prepare your learning session.
-
-
+We couldn't prepare your learning session.
 
 Action:
 
+Try Again
 
-
-`Try Again`
-
-
-
-\---
-
-
-
-\# Post-Onboarding Topic Switching
-
-
+Post-Onboarding Topic Switching
 
 Onboarding creates the learner's first learning path, but does not permanently lock them into it.
 
-
-
 Later, users can open their learning-path selector and:
 
+Add another topic
 
+Switch the current topic
 
-\- Add another topic
-
-\- Switch the current topic
-
-\- Return to a previously paused topic
-
-
+Return to a previously paused topic
 
 Example:
 
-
-
-```text
-
 My Learning
-
-
 
 Python
 
@@ -476,15 +252,11 @@ Python
 
 Continue →
 
-
-
 C
 
 ████░░░░░░ 41%
 
 Continue →
-
-
 
 C++
 
@@ -495,40 +267,51 @@ Continue →
 Switching topics must preserve the previous topic's:
 
 Progress
+
 Mastery
+
 Attempts
+
 Review state
+
 Learning history
+
 Navigation Flow
+
 Welcome
-   ↓
+↓
 Choose Topic
-   ↓
+↓
 Choose Level
-   ↓
+↓
 Daily Goal
-   ↓
+↓
 Learning Feed
 
 After onboarding:
 
 Learning Feed
-      ↓
-  Switch Topic
-      ↓
-  My Learning
-   ↙   ↓   ↘
+↓
+Switch Topic
+↓
+My Learning
+↙   ↓   ↘
 Python  C   C++
 
-# Wireframe Notes
+Wireframe Notes
 
 The onboarding should feel lightweight.
 
 Avoid:
 
-- Long explanations
-- Account/profile customization
-- Social setup
-- Complex preferences
-- Multiple configuration screens
-- Asking for information that is not needed for the learning experience
+Long explanations
+
+Account/profile customization
+
+Social setup
+
+Complex preferences
+
+Multiple configuration screens
+
+Asking for information that is not needed for the learning experience

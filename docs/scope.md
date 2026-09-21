@@ -2,7 +2,7 @@
 
 ## Problem
 
-Many people want to learn programming and computer science but are uncomfortable with long-form courses, lectures, and large study sessions. They want to learn something useful in small amounts of time while still reaching a point where they can understand concepts, answer questions, reason about code, find bugs, and solve problems.
+Many people want to learn programming and computer science but are uncomfortable with long-form courses, lectures, and large study sessions. They want to learn something useful in small amounts of time while still reaching a point where they can understand concepts, answer questions, reason about code, and find bugs.
 
 CodeFlow is a gamified, mobile-first learning app designed around short daily learning sessions.
 
@@ -25,17 +25,17 @@ The pilot audience is intentionally narrower so the learning experience can be e
 
 ## Value Proposition
 
-> Learn programming in small daily steps — understand it, practice it, solve problems, and remember it.
+> Learn programming in small daily steps — understand code, spot bugs, practice, and remember it.
 
 The core learning loop is:
 
-**Learn → Recall → Reason → Solve → Get feedback → Review**
+**Learn → Recall → Reason → Practice → Get feedback → Review**
 
-Short sessions are the delivery mechanism, not the learning objective. CodeFlow should optimize for what the learner can eventually **do**, rather than how many lessons they complete.
+Short sessions are the delivery mechanism, not the learning objective. CodeFlow should optimize for what the learner can eventually **understand, reason about, practice, and remember**, rather than how many lessons they complete.
 
 ## Product Positioning
 
-CodeFlow is a **CS micro-learning + problem-solving mastery** platform.
+CodeFlow is a **CS micro-learning + code reasoning and debugging mastery** platform.
 
 Users choose what they want to learn. Each available topic provides its own structured learning path. Users can pause one path, switch to another, and return later without losing progress.
 
@@ -47,12 +47,9 @@ Existing products such as Mimo and SoloLearn already provide bite-sized programm
 
 CodeFlow's intended distinction is the combination of:
 
-- User-selected learning paths
-- Short interactive learning units
 - Prerequisite-aware progression within each path
 - Code reading and reasoning
 - Spot-the-bug practice
-- Problem-solving puzzles
 - Adaptive practice based on learner performance
 - Progress measured through mastery rather than lesson completion alone
 
@@ -64,13 +61,35 @@ The key product question is:
 
 ### Learning paths
 
-Initial launch paths:
+Initial pilot paths:
 
 - Python
 - C
-- C++
+
+C++ is a stretch target and is not part of the initial pilot content target.
 
 Each path has its own progression and learner state.
+
+### Pilot content target
+
+The initial pilot targets approximately:
+
+- 6 concepts per language
+- 8 cards per concept
+- 1 Concept card
+- 2 Code cards
+- 3 Quiz cards
+- 2 Spot-the-Bug cards
+
+This gives approximately:
+
+- 48 cards for Python
+- 48 cards for C
+- 96 cards total
+
+C++ is a stretch target and is not included in the 96-card pilot target.
+
+Each concept should have at least 3 quiz cards so delayed-accuracy assessments can use different questions from the initial exposure where possible, reducing familiarity bias.
 
 ### Card types
 
@@ -83,7 +102,7 @@ The curriculum provides structure while practice cards can be selected adaptivel
 
 ### Product
 
-- Android-first mobile experience
+- React Native (Expo) mobile experience, tested and shipped on Android first
 - Onboarding
 - Topic/language selection
 - Level selection
@@ -120,22 +139,40 @@ The following are explicitly not part of the first version:
 - Certificates
 - Large coding projects
 - Full IDE/development environment
-- AI tutor
-- AI-generated learning content
 - AI-generated grading
 - Voice/video lessons
-- Web/desktop application
+- Learner-facing web application
 - Monetization/subscriptions
 - Advanced personalization beyond the initial adaptive feed
 - Production-scale cloud infrastructure
 
+### Post-V1 stretch
+
+The following are intentionally deferred and must not be dependencies for the pilot:
+
+- Admin dashboard
+- AI-generated content pipeline
+- AI tutor (RAG)
+
+These may be considered after the core V1 learning experience has been validated.
+
 These may be considered later, but they are not required to validate the core learning loop.
+
+## V2 Ideas
+
+Potential future practice formats include:
+
+- Arrange-the-lines
+- Fill-the-missing-line
+- Write-a-function with a sandbox
+
+These are not part of V1.
 
 ## Product Principles
 
 1. **Small sessions, real learning.** Short does not mean shallow.
 2. **Active recall over passive consumption.**
-3. **Problem solving is a first-class outcome.**
+3. **Code reasoning and debugging matter.**
 4. **Application matters.** Learners should eventually use concepts and syntax.
 5. **Prerequisites matter within each learning path.**
 6. **Gamification supports learning rather than replacing it.**
